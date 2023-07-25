@@ -3,7 +3,7 @@ const mongoose = require('mongoose')
 const cors = require('cors')
 require('dotenv').config()
 
-const PORT = process.env.PORT || 8149
+const PORT = process.env.PORT || 5500
 
 const app = express()
 
@@ -48,4 +48,4 @@ app.delete('/posts/:id', async (req, res) => {
     res.status(200).send('Post deleted')
 })
 
-app.listen(5500, () => console.log(`Server started on post ${PORT}`))
+app.listen(5500, () => console.log(`Server started on port ${PORT}`))
